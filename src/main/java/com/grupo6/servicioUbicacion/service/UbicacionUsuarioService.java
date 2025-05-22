@@ -1,6 +1,7 @@
 package com.grupo6.servicioUbicacion.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -21,8 +22,8 @@ public class UbicacionUsuarioService {
         return ubicacionUsuarioRepo.findAll();
     }
 
-    public UbicacionUsuario getUbicacionUsuarioById(Integer id) {
-        return ubicacionUsuarioRepo.findById(id).orElse(null);
+    public Optional<UbicacionUsuario> getUbicacionUsuarioById(Integer id) {
+        return ubicacionUsuarioRepo.findById(id);
     }
 
     public UbicacionUsuario saveUbicacionUsuario(UbicacionUsuario ubicacionUsuario) {
