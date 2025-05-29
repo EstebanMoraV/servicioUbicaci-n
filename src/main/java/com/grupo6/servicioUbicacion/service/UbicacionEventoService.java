@@ -30,7 +30,6 @@ public class UbicacionEventoService {
         return ubicacionEventoRepo.save(ubicacionEvento);
     }
     
-
     public void deleteUbicacionEvento(Integer id) {
         ubicacionEventoRepo.deleteById(id);
     }
